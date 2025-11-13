@@ -1,0 +1,1 @@
+# fuata-automat
