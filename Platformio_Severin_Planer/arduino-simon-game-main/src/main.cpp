@@ -6,7 +6,7 @@ void setup() {
 }
 void loop() {
   
-if counter % 3 == 0 {
+if (counter % 3 == 0) {
     Serial.println("Fizz");
   } else if counter % 5 == 0 {
     Serial.println("Buzz");
