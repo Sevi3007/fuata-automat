@@ -8,7 +8,7 @@ void loop() {
   
 if (counter % 3 == 0) {
     Serial.println("Fizz");
-  } else if counter % 5 == 0 {
+  } else if (counter % 5 == 0) {
     Serial.println("Buzz");
   } else {
     Serial.println(counter);
@@ -16,5 +16,5 @@ if (counter % 3 == 0) {
   Serial.print("Counter: ");
   Serial.println(counter);
   counter++;
-  delay(1000); // wait for a second
-}
+  delay(1000);
+} 
