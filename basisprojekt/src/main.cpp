@@ -11,6 +11,10 @@
 const int BTN_PINK = 2;
 const int BTN_BLUE = 3;
 
+
+const int LED_PINK = 9;
+const int LED_BLUE = 8;
+
 Bounce2 :: Button btnPink = Bounce2 :: Button();
 Bounce2 :: Button btnBlue = Bounce2 :: Button();
 
@@ -22,6 +26,13 @@ int counter = 0;
 
 
 void setup() {
+
+  pinMode(LED_PINK,OUTPUT);
+  pinMode (LED_PINK,OUTPUT);
+
+
+
+
   Serial.begin(9600);
   btnPink.attach(BTN_PINK,INPUT_PULLUP);
   btnPink.setPressedState(LOW);
@@ -37,6 +48,9 @@ void loop() {
   if(btnPink.pressed())
   {
       Serial.println("pink pressed");
+      digitalWrite(LED_PINK,HIGH);
+      delay(2000);
+      digitalWrite(LED_PINK,LOW);
   }
 
    if(btnBlue.pressed())
